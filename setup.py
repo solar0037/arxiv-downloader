@@ -5,7 +5,8 @@ setup(
     version='0.1-dev',
     packages=find_packages(),
     install_requires=[
-        'bs4'
+        'bs4',
+        'requests'
     ],
     entry_points={
         'console_scripts': [
