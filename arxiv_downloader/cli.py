@@ -12,9 +12,13 @@ def main():
 
     ids = args.ids
     for id_ in ids:
-        paper_name = find_paper_name(id_)
-        paper = Paper(id_, paper_name)
-        download_paper(paper)
+        try:
+            paper_name = find_paper_name(id_)
+            paper = Paper(id_, paper_name)
+            download_paper(paper)
+        except Exception as e:
+            print(e)
+            exit(1)
 
 
 if __name__ == '__main__':
