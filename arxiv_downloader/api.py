@@ -19,7 +19,7 @@ def find_paper_name(id_: str) -> str:
     try:
         html = _get_paper_html(id_)
         paper_name = _find_title_from_paper_html(html)
-    except ParsingError:
+    except:
         paper_name = id_
 
     return paper_name
